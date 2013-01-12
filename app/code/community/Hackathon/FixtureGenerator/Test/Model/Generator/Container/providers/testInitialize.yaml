@@ -1,0 +1,8 @@
+-
+  - "{increment:1}|{random:4,2}"
+-
+  - "{increment:1}|somestring|{$variable}|$notvariable"
+- # In case of pipe is escaped
+  - "{increment:1}|somestring|{$variable}\|$notvariable"
+- # In case of pipe is escaped
+  - "{increment:1}|somestring|\|$notvariable"

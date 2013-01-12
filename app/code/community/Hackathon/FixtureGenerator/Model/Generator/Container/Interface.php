@@ -32,4 +32,5 @@ interface Hackathon_FixtureGenerator_Model_Generator_Container_Interface
      */
     public function generate($rowData);
 
+
 }
