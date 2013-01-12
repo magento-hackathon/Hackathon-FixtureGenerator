@@ -24,5 +24,16 @@ class Hackathon_FixtureGenerator_Model_Processor_Product_Simple
     {
         $numberOfIterations = (isset($data['number'])) ? $data['number'] : 1;
 
+        $products = array();
+        for ($i = 1; $i <= $numberOfIterations; $i++) {
+            $data = array(
+                'entity_id' => $i,
+                'type_id' => 'simple',
+                'sku' => 'test_'.$i,
+                'name' => 'Test '.$i
+            );
+            $products[] = $data;
+        }
+        return $products;
     }
 }
