@@ -13,7 +13,7 @@ class Hackathon_FixtureGenerator_Model_Processor implements EcomDev_PHPUnit_Mode
      */
     public function apply(array $data, $key, EcomDev_PHPUnit_Model_Fixture_Interface $fixture)
     {
-        
+
     }
 
     /**
