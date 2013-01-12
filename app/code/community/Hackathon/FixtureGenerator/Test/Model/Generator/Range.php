@@ -1,6 +1,6 @@
 <?php
 
-class Hackathon_FixtureGenerator_Test_Model_Generator_Abstract extends EcomDev_PHPUnit_Test_Case
+class Hackathon_FixtureGenerator_Test_Model_Generator_Range extends EcomDev_PHPUnit_Test_Case
 {
     protected $generator = null;
 

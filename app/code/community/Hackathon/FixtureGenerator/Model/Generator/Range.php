@@ -2,6 +2,7 @@
 
 class Hackathon_FixtureGenerator_Model_Generator_Range extends Hackathon_FixtureGenerator_Model_Generator_Abstract 
 {
+	protected $format;
 	protected $range;
 	
 	public function __construct($format)
