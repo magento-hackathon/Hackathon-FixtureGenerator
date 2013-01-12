@@ -21,7 +21,11 @@ class Hackathon_FixtureGenerator_Test_Model_Generator_Increment extends EcomDev_
         $this->generator = $this->getMockForAbstractClass('Hackathon_FixtureGenerator_Model_Generator_Increment', array($string));
         $dataSet = $this->readAttribute($this, 'dataName');
         for ($i = 0; $i < $numberOfIterations; $i++) {
-            $this->assertEquals($this->expected($dataSet)->getData('iteration_' . $i), $this->generator->generate($currentRow));
+            $this->assertEquals(
+                $this->expected($dataSet)->getData('iteration_' . $i),
+                $this->generator->generate($currentRow),
+                'Assertation ' . $i . ' failed'
+            );
         }
     }
 }
