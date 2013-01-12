@@ -1,4 +1,4 @@
-type: php
+language: php
 php:
   - 5.3
 before_install:
