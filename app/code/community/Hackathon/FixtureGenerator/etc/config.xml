@@ -1,17 +1,41 @@
 <?xml version="1.0"?>
 <config>
-	<phpunit>
-		<suite>
-			<modules>
-				<Hackathon_FixtureGenerator/>
-			</modules>
-		</suite>
-	</phpunit>
-	<global>
-		<models>
-			<hackathon_fixturegenerator>
-				<class>Hackathon_FixtureGenerator_Model</class>
-			</hackathon_fixturegenerator>
-		</models>
-	</global>
+    <modules>
+        <Hackathon_FixtureGenerator>
+            <version>1.0.0</version>
+        </Hackathon_FixtureGenerator>
+    </modules>
+    <global>
+        <models>
+            <hackathon_fixturegenerator>
+                <class>Hackathon_FixtureGenerator_Model</class>
+            </hackathon_fixturegenerator>
+        </models>
+    </global>
+    <phpunit>
+        <suite>
+            <modules>
+                <Hackathon_FixtureGenerator/>
+            </modules>
+        </suite>
+        <testdata>
+            <processor>
+                <product>
+                    <simple>
+                        <entity_id>{increment:1}</entity_id>
+                        <type_id>simple</type_id>
+                        <tax_class_id>1</tax_class_id>
+                        <status>1</status>
+                        <visibility>4</visibility>
+                        <description>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</description>
+                        <short_description>Lorem ipsum dolor sit amet.</short_description>
+                        <price>{range:10,50,10}</price>
+                        <weight>1</weight>
+                        <name>Test</name>
+                        <sku>test_|{range:1:5:1}</sku>
+                    </simple>
+                </product>
+            </processor>
+        </testdata>
+    </phpunit>
 </config>
