@@ -1,10 +1,17 @@
 <?xml version="1.0"?>
 <config>
-    <phpunit>
-        <suite>
-            <modules>
-                <Hackathon_FixtureGenerator />
-            </modules>
-        </suite>
-    </phpunit>
+	<phpunit>
+		<suite>
+			<modules>
+				<Hackathon_FixtureGenerator/>
+			</modules>
+		</suite>
+	</phpunit>
+	<global>
+		<models>
+			<hackathon_fixturegenerator>
+				<class>Hackathon_FixtureGenerator_Model</class>
+			</hackathon_fixturegenerator>
+		</models>
+	</global>
 </config>

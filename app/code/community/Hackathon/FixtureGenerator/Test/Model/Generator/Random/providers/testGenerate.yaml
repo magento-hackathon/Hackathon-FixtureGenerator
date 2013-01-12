@@ -1,0 +1,6 @@
+test_replacement1:
+  - id: 1
+  - {random:2:4}
+test_replacement2:
+  - id: 2
+  - {random:2}
