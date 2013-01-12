@@ -3,6 +3,8 @@
 class Hackathon_FixtureGenerator_Model_Processor_Product_Simple
     implements Hackathon_FixtureGenerator_Model_Processor_Interface
 {
+    protected $generators = array();
+
     /**
      * @param array $data array(
      *   'number' => 2,
@@ -25,36 +27,30 @@ class Hackathon_FixtureGenerator_Model_Processor_Product_Simple
         $numberOfIterations = (isset($data['number'])) ? $data['number'] : 1;
         unset($data['number']);
 
-
+        // Get default values for the required attributes and merge it with the passed data
         $requiredAttributes = $this->getRequiredAttributes();
+        $defaultData = array();
+        foreach ($requiredAttributes as $attribute) {
+            $defaultData[$attribute] = $this->getDefaultValue($attribute);
+        }
+        $data =  $data + $defaultData;
+
+        /* @var $generators Hackathon_FixtureGenerator_Model_Generator_Container[] */
+        $generators = array();
         $products = array();
         for ($i = 1; $i <= $numberOfIterations; $i++) {
             $productData = array();
             foreach ($data as $key => $value) {
-                $productData[$key] = $this->getProcessedValue($value);
-            }
-
-            foreach ($requiredAttributes as $attribute) {
-                if (!isset($productData[$attribute])) {
-                    $defaultValue = $this->getDefaultValue($attribute);
-                    $productData[$attribute] = $this->getProcessedValue($defaultValue);
+                if (!isset($generators[$key])) {
+                    $generators[$key] = Mage::getModel('hackathon_fixturegenerator/generator_container');
+                    $generators[$key]->initialize($value);
                 }
+                $productData[$key] = $generators[$key]->generate($productData);
             }
 
             $products[] = $productData;
         }
         return $products;
-    }
-
-    /**
-     * Calls the generator interface which returns the correct value for the given value
-     *
-     * @param $value
-     * @return mixed
-     */
-    public function getProcessedValue($value)
-    {
-        return $value;
     }
 
     /**

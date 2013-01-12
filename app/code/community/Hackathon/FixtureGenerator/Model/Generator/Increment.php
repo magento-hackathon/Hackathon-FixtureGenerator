@@ -7,6 +7,8 @@ class Hackathon_FixtureGenerator_Model_Generator_Increment extends Hackathon_Fix
      */
     protected $increment;
 
+    protected $placeholder;
+
     /**
      * Class constructor; sets the increment value
      * @param $format
@@ -16,9 +18,10 @@ class Hackathon_FixtureGenerator_Model_Generator_Increment extends Hackathon_Fix
     {
         $this->format = $format;
 
-        if (preg_match_all('/\\{increment\:(.*)\\}/', $format, $vars)) {
-            $increment = $vars[1][0];
+        if (preg_match('/\\{increment\:(.*)\\}/', $format, $vars)) {
+            $increment = $vars[1];
             $this->increment = $increment;
+            $this->placeholder = $vars[0];
         }
     }
 
@@ -30,8 +33,7 @@ class Hackathon_FixtureGenerator_Model_Generator_Increment extends Hackathon_Fix
      */
     public function generate(array $data)
     {
-        $increment = $this->increment;
-        $this->increment++;
-        return $increment;
+        $value = str_replace($this->placeholder, $this->increment++, $this->format);
+        return $value;
     }
 }
