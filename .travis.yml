@@ -9,6 +9,6 @@ before_script:
   - bin/mage-ci install-module test $(pwd)
   - git clone git://github.com/IvanChepurnyi/EcomDev_PHPUnit.git ./phpunit/
   - cd ./phpunit/ && git checkout dev && cd ..
-  - bin/mage-ci install-module test phpunit
+  - bin/mage-ci install-module test ./phpunit/
 script:
   - bin/mage-ci phpunit test
