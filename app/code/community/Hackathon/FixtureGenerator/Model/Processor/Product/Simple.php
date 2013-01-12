@@ -46,11 +46,22 @@ class Hackathon_FixtureGenerator_Model_Processor_Product_Simple
         return $products;
     }
 
-    public function getProcessedValue($string)
+    /**
+     * Calls the generator interface which returns the correct value for the given value
+     *
+     * @param $value
+     * @return mixed
+     */
+    public function getProcessedValue($value)
     {
-        return $string;
+        return $value;
     }
 
+    /**
+     * Retrieve an array with the required attributes for this product
+     *
+     * @return array
+     */
     public function getRequiredAttributes()
     {
         $attributes = array(
@@ -68,6 +79,12 @@ class Hackathon_FixtureGenerator_Model_Processor_Product_Simple
         return $attributes;
     }
 
+    /**
+     * Read the default value from the config.xml, if no value is given in the data provider.
+     *
+     * @param string $attribute
+     * @return string
+     */
     public function getDefaultValue($attribute)
     {
         $node = 'phpunit/testdata/processor/product/simple/'.$attribute;
