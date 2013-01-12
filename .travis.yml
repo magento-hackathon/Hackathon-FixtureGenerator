@@ -7,10 +7,10 @@ before_install:
 before_script:
   - bin/mage-ci install test 1.7.0.2 magento_test -c -t -r http://mage-ci.ecomdev.org
   - bin/mage-ci install-module test $(pwd)
-  - git clone git://github.com/IvanChepurnyi/EcomDev_PHPUnit.git ./phpunit/
-  - cd ./phpunit/
+  - git clone git://github.com/IvanChepurnyi/EcomDev_PHPUnit.git ./EcomDev_PHPUnit/
+  - cd ./EcomDev_PHPUnit/
   - git checkout dev
   - cd ..
-  - bin/mage-ci install-module test ./phpunit/
+  - bin/mage-ci install-module test ./EcomDev_PHPUnit/
 script:
   - bin/mage-ci phpunit test
