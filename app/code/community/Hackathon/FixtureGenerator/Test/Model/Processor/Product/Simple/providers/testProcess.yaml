@@ -1,4 +1,20 @@
 test_generation:
-  - number: 2
-  - sku: "test_{increment:1}"
-  - name: "Test {increment:1}"
+  simple:
+    number: 2
+    sku: "test_{increment:1}"
+    name: "Test {increment:1}"
+test_generation_description:
+  simple:
+    number: 2
+    sku: "test_{increment:1}"
+    name: "Test {increment:1}"
+    description: I am a test for a super cool extension.
+    short_description: I am a test.
+test_generation_taxclass_status_visibility:
+  simple:
+    number: 2
+    sku: "test_{increment:1}"
+    name: "Test {increment:1}"
+    tax_class_id: 1
+    status: 2
+    visibility: 2
