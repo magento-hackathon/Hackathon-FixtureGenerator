@@ -1,0 +1,4 @@
+test_replacement:
+  - sku: 5464
+  - {range:1,5,1}
+  - 10
