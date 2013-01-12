@@ -1,0 +1,4 @@
+test_replacement:
+  - sku: 5464
+  - sku{increment:4}
+  - 5
