@@ -22,11 +22,11 @@ class Hackathon_FixtureGenerator_Test_Model_Generator_Range extends EcomDev_PHPU
         $dataSet = $this->readAttribute($this, 'dataName');
 		for ($i = 1; $i <= $numberOfIteration; $i++) {
 			$this->assertEquals(
-				$this->expected($dataSet)->getData('iteration_' . $i), 
+				$this->expected($dataSet)->getData('iteration_' . $i),
 				$this->generator->generate($currentRow),
-				'Assertaion ' . $i . ' failed'
-		     );
+				'Assertation ' . $i . ' failed'
+		    );
 		}
-        
+
     }
 }
