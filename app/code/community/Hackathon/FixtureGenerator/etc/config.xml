@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <phpunit>
+        <suite>
+            <modules>
+                <MagentoHackathon_FixtureGenerator />
+            </modules>
+        </suite>
+    </phpunit>
+</config>
