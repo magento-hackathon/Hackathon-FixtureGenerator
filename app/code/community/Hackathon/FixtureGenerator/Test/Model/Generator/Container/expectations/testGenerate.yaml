@@ -1,0 +1,21 @@
+"{increment:1}|{range:2,4,1}":
+  - 12
+  - 23
+  - 34
+  - 42
+  - 53
+  - 64
+"{increment:1}|somestring|{$variable}|$notvariable":
+  - 1somestring3$notvariable
+  - 2somestring3$notvariable
+  - 3somestring3$notvariable
+  - 4somestring3$notvariable
+  - 5somestring3$notvariable
+  - 6somestring3$notvariable
+"{increment:1}|somestring|{$variable}\|$notvariable":
+  - 1somestringnone|$notvariable
+  - 2somestringnone|$notvariable
+  - 3somestringnone|$notvariable
+  - 4somestringnone|$notvariable
+  - 5somestringnone|$notvariable
+  - 6somestringnone|$notvariable
