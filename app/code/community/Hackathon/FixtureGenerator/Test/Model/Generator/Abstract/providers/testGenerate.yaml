@@ -1,0 +1,6 @@
+test_replacement:
+  - id: 1
+  - sku{$id}
+test_replacement_empty:
+  - key: 1
+  - sku{$id}

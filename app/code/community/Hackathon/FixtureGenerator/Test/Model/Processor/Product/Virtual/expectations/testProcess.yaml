@@ -1,0 +1,16 @@
+test_generation:
+  product_1:
+    entity_id: 1
+    type_id: "virtual"
+    sku: "virtual_1"
+    name: "Virtual 1"
+  product_2:
+    entity_id: 2
+    type_id: "virtual"
+    sku: "virtual_2"
+    name: "Virtual 2"
+  product_3:
+      entity_id: 3
+      type_id: "virtual"
+      sku: "virtual_3"
+      name: "Virtual 3"
