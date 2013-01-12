@@ -3,7 +3,7 @@
     <phpunit>
         <suite>
             <modules>
-                <MagentoHackathon_FixtureGenerator />
+                <Hackathon_FixtureGenerator />
             </modules>
         </suite>
     </phpunit>
