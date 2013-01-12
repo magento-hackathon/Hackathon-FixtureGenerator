@@ -2,7 +2,7 @@ language: php
 php:
   - 5.3
 before_install:
-  - composer install -dev
+  - composer install --dev
   - mkdir test/
 before_script:
   - bin/mage-ci install test 1.7.0.2 magento_test -c -t -r http://mage-ci.ecomdev.org
