@@ -6,7 +6,7 @@ class Hackathon_FixtureGenerator_Test_Model_Processor_Product_Simple extends Eco
 
     protected function setUp()
     {
-
+        $this->processor = Mage::getModel('Hackathon_FixtureGenerator_Model_Processor_Product_Simple');
     }
 
     /**
@@ -15,7 +15,6 @@ class Hackathon_FixtureGenerator_Test_Model_Processor_Product_Simple extends Eco
      */
     public function testProcess(array $data)
     {
-        $this->processor = $this->getMockForAbstractClass('Hackathon_FixtureGenerator_Model_Processor_Product_Simple');
         $dataSet = $this->readAttribute($this, 'dataName');
 
         $numberOfIterations = (isset($data['number'])) ? $data['number'] : 1;
