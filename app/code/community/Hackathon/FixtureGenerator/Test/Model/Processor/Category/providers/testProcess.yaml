@@ -2,3 +2,6 @@ test_generation:
   - number: 3
     entity_id: "{increment:1}"
     name: "name_{$entity_id}"
+test_generation_categories_default_data:
+  -
+    number: 2
