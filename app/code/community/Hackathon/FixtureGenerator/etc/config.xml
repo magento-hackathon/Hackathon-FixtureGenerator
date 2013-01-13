@@ -38,7 +38,7 @@
                     <city>Test City</city>
                     <country_id>US</country_id>
                     <region_id>23</region_id>
-                    <postcode>{range:10000,50000,1000}</postcode>
+                    <postcode>{range:10000:50000:1000}</postcode>
                     <telephone>0123456789</telephone>
                 </customer_address>
                 <product>
