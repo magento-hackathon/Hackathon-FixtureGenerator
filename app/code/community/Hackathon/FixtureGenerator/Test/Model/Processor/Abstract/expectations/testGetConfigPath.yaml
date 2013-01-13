@@ -1,0 +1,4 @@
+product: phpunit/testdata/processor/product
+customer: phpunit/testdata/processor/customer
+quote: phpunit/testdata/processor/quote
+quote_item: phpunit/testdata/processor/quote_item

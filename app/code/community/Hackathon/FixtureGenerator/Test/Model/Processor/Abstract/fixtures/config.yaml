@@ -1,0 +1,15 @@
+config_xml:
+  phpunit/testdata/processor: --- |
+    <processor>
+      <product>
+        <entity_id>{increment:1}</entity_id>
+        <sku>{$entity_id}</sku>
+        <name>{$sku}</name>
+        <price>{range:10,20,0.50}</price>
+      </product>
+      <customer>
+        <entity_id>{increment:1}</entity_id>
+        <firstname>John {$entity_id}</firstname>
+        <lastname>Doe</lastname>
+      </customer>
+    </processor>

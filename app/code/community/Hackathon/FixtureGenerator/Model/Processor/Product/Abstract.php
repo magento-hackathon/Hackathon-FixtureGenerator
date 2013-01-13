@@ -1,9 +1,24 @@
 <?php
 
 abstract class Hackathon_FixtureGenerator_Model_Processor_Product_Abstract
-	implements Hackathon_FixtureGenerator_Model_Processor_Interface {
+    extends Hackathon_FixtureGenerator_Model_Processor_Abstract
+	implements Hackathon_FixtureGenerator_Model_Processor_Interface
+{
 
-	protected $generators = array();
+    protected $requiredKeys = array(
+        'entity_id',
+        'type_id',
+        'description',
+        'weight',
+        'price',
+        'tax_class_id',
+        'status',
+        'visibility',
+        'description',
+        'short_description'
+    );
+
+    protected $productType = 'abstract';
 
 	/**
 	 * @param array $data array(
@@ -31,83 +46,15 @@ abstract class Hackathon_FixtureGenerator_Model_Processor_Product_Abstract
 			unset($data['number']);
 		}
 
-		$data = $this->getMergedAttributes($data);
+		$data = array_merge($this->getDefaultData(), $data);
+
+        $this->initialize($data);
 
 		$products = array();
 		for ($i = 1; $i <= $numberOfIterations; $i++) {
-			$productData = $this->generateProduct($data);
+			$productData = $this->generate($data);
 			$products[] = $productData;
 		}
 		return $products;
 	}
-
-	/**
-	 * Get merged array of default and set attributes
-	 *
-	 * @param $data
-	 * @return array
-	 */
-	protected function getMergedAttributes($data) {
-	// Get default values for the required attributes and merge it with the passed data
-		$requiredAttributes = $this->getRequiredAttributes();
-		$defaultData = array();
-		foreach ($requiredAttributes as $attribute) {
-			$defaultData[$attribute] = $this->getDefaultValue($attribute);
-		}
-		$data = $data + $defaultData;
-		return $data;
-	}
-
-	/**
-	 * Generates one product depending on the data provided
-	 *
-	 * @param $data
-	 * @return array
-	 */
-	protected function generateProduct($data) {
-		$productData = array();
-		foreach ($data as $key => $value) {
-			if (!isset($this->generators[$key])) {
-				$this->generators[$key] = Mage::getModel('hackathon_fixturegenerator/generator_container');
-				$this->generators[$key]->initialize($value);
-			}
-			$productData[$key] = $this->generators[$key]->generate($productData);
-		}
-		return $productData;
-	}
-
-	/**
-	 * Retrieve an array with the required attributes for this product
-	 *
-	 * @return array
-	 */
-	protected function getRequiredAttributes()
-	{
-		$attributes = array(
-			'entity_id',
-			'type_id',
-			'description',
-			'weight',
-			'price',
-			'tax_class_id',
-			'status',
-			'visibility',
-			'description',
-			'short_description'
-		);
-		return $attributes;
-	}
-
-	/**
-	 * Read the default value from the config.xml, if no value is given in the data provider.
-	 *
-	 * @param string $attribute
-	 * @return string
-	 */
-	protected function getDefaultValue($attribute)
-	{
-		$node = 'phpunit/testdata/processor/product/simple/'.$attribute;
-		return (string) Mage::getConfig()->getNode($node);
-	}
-
 }

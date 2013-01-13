@@ -1,0 +1,42 @@
+test_generation_virtual:
+  - virtual:
+      number: 3
+      name: "Virtual {$entity_id}"
+      sku: "virtual_{$entity_id}"
+test_generation_simple:
+  - simple:
+      number: 2
+      name: "Test {$entity_id}"
+      sku: "test_{$entity_id}"
+test_generation_description:
+  - simple:
+      number: 2
+      sku: "test_{$entity_id}"
+      name: "Test {$entity_id}"
+      short_description: I am a test.
+      description: I am a test for a super cool extension.
+test_generation_taxclass_status_visibility:
+  - simple:
+      number: 2
+      name: "Test {$entity_id}"
+      sku: "test_{$entity_id}"
+      tax_class_id: 1
+      status: 2
+      visibility: 2
+test_generation_combined:
+  - simple:
+      number: 2
+      name: "Test {$entity_id}"
+      sku: "test_{$entity_id}"
+      tax_class_id: 1
+      status: 2
+      visibility: 2
+    virtual:
+      number: 1
+      entity_id: "{increment:3}"
+      name: "Virtual {$entity_id}"
+      sku: "virtual_{$entity_id}"
+      tax_class_id: 1
+      status: 2
+      visibility: 2
+      price: 30

@@ -10,7 +10,7 @@ test_generation:
     sku: "virtual_2"
     name: "Virtual 2"
   product_3:
-      entity_id: 3
-      type_id: "virtual"
-      sku: "virtual_3"
-      name: "Virtual 3"
+    entity_id: 3
+    type_id: "virtual"
+    sku: "virtual_3"
+    name: "Virtual 3"

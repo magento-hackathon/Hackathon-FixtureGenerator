@@ -1,0 +1,10 @@
+-
+  -
+    - entity_id
+    - sku
+    - name
+-
+  -
+    - some_key
+    - some_other_key
+    - more_key

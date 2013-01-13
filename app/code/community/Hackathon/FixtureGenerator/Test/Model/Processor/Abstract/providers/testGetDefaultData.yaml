@@ -1,0 +1,12 @@
+product_sku_price:
+  - product
+  - [sku, price]
+product_price_name:
+  - product
+  - [price, name]
+customer_firstname:
+  - customer
+  - [firstname]
+customer_lastname:
+  - customer
+  - [lastname]

@@ -1,0 +1,7 @@
+product:
+  sku: "{$entity_id}"
+  price: "{range:10,20,0.50}"
+  name: "{$sku}"
+customer:
+  firstname: "John {$entity_id}"
+  lastname: "Doe"
