@@ -22,6 +22,19 @@
  */
 class Hackathon_FixtureGenerator_Model_Processor implements EcomDev_PHPUnit_Model_Fixture_Processor_Interface
 {
+    protected $fixtures = array(
+        'product' => array(
+            'type' => 'eav',
+            'path' => 'catalog_product',
+            'model' => 'hackathon_fixturegenerator/processor_product'
+        ),
+        'category' => array(
+            'type' => 'eav',
+            'path' => 'catalog_category',
+            'model' => 'hackathon_fixturegenerator/processor_category'
+        )
+    );
+
     /**
      * Applies data from fixture file
      *
@@ -33,7 +46,7 @@ class Hackathon_FixtureGenerator_Model_Processor implements EcomDev_PHPUnit_Mode
      */
     public function apply(array $data, $key, EcomDev_PHPUnit_Model_Fixture_Interface $fixture)
     {
-
+        // Does nothing
     }
 
     /**
@@ -47,7 +60,7 @@ class Hackathon_FixtureGenerator_Model_Processor implements EcomDev_PHPUnit_Mode
      */
     public function discard(array $data, $key, EcomDev_PHPUnit_Model_Fixture_Interface $fixture)
     {
-
+        // Does nothing
     }
 
     /**
@@ -58,6 +71,37 @@ class Hackathon_FixtureGenerator_Model_Processor implements EcomDev_PHPUnit_Mode
      */
     public function initialize(EcomDev_PHPUnit_Model_Fixture_Interface $fixture)
     {
+        $generateData = $fixture->getFixtureValue('generate');
+        $fixtureData = array();
+        foreach ($generateData as $generateByTypes) {
+            foreach ($generateByTypes as $type => $data) {
+               if (!isset($this->fixtures[$type]['path'])) {
+                   continue;
+               }
+               $path = $this->fixtures[$type]['path'];
+               $fixtureType = isset($this->fixtures[$type]['type']) ? $this->fixtures[$type]['type'] : 'tables';
+               if (!isset($fixtureData[$fixtureType][$path])) {
+                   $fixtureData[$fixtureType][$path] = array();
+               }
 
+                $fixtureData[$fixtureType][$path] = array_merge(
+                    $fixtureData[$fixtureType][$path],
+                   Mage::getSingleton($this->fixtures[$type]['model'])->process($data)
+               );
+            }
+        }
+
+        foreach ($fixtureData as $type => $entities) {
+            $fixtureValue = $fixture->getFixtureValue($type);
+            foreach ($entities as $path => $records) {
+                Mage::helper('hackathon_fixturegenerator')->updatePathValue(
+                    $path, $records, $fixtureValue
+                );
+            }
+
+            $fixture->setFixtureValue($type, $fixtureValue);
+        }
+
+        return $this;
     }
 }

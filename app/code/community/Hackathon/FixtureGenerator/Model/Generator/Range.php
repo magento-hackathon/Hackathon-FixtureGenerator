@@ -23,27 +23,28 @@
 class Hackathon_FixtureGenerator_Model_Generator_Range extends Hackathon_FixtureGenerator_Model_Generator_Abstract
 {
     /**
-     * @var string
-     */
-    protected $format;
-
-    /**
      * @var array
      */
     protected $range;
 
     /**
+     * @var string
+     */
+    protected $placeholder;
+
+    /**
      * @param $format
      */
-    public function __construct($format)
+	public function __construct($format)
 	{
-		$this->format = $format;
-
-        if (preg_match_all('/\\{range\:(.*)[,\:](.*)[,\:](.*)\\}/', $format, $vars)) {
-        	$from = $vars[1][0];
-			$to = $vars[2][0];
-			$step = $vars[3][0];
-			$this->range = range($from,$to,$step);
+	    parent::__construct($format);
+		
+        if (preg_match('/\\{range\:(.*)[,\:](.*)[,\:](.*)\\}/', $this->format, $vars)) {
+        	$from = $vars[1];
+			$to = $vars[2];
+			$step = $vars[3];
+			$this->range = range($from, $to, $step);
+            $this->placeholder = $vars[0];
 		}
 	}
 
@@ -59,6 +60,6 @@ class Hackathon_FixtureGenerator_Model_Generator_Range extends Hackathon_Fixture
 			reset($this->range);
 		}
 
-		return $next;
+		return str_replace($this->placeholder, $next, $this->format);
 	}
 }

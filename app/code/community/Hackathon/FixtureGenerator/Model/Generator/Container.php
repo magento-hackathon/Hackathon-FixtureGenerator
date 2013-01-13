@@ -78,6 +78,7 @@ class Hackathon_FixtureGenerator_Model_Generator_Container
     public function initialize($string)
     {
         self::initializeGenerators();
+        $this->value = array();
         $unParsedValue = preg_split('/(?<!\\\\)\\|/', $string);
         foreach ($unParsedValue as $item) {
             $item = strtr($item, array('\\|' => '|'));
