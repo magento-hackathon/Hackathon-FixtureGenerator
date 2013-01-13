@@ -1,10 +1,28 @@
 <?php
-
+/**
+ * Fixture Generator module for PHP Unit test suite for Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Hackathon
+ * @package    Hackathon_FixtureGenerator
+ * @author     Peter Jaap Blaakmeer <https://github.com/peterjaap>
+ * @author     Ivan Chepurnyi <https://github.com/IvanChepurnyi>
+ * @author     Dima Janzen <https://github.com/dimajanzen>
+ * @author     Rouven Alexander Rieker <https://github.com/therouv>
+ * @author     Michael Ryvlin <https://github.com/mryvlin>
+ * @copyright  2013 Hackathon Dev Team (http://www.magento-hackathon.de/)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @link       https://github.com/magento-hackathon/Hackathon-FixtureGenerator/
+ */
 class Hackathon_FixtureGenerator_Test_Model_Generator_Container extends EcomDev_PHPUnit_Test_Case
 {
     /**
-     *
-     *
      * @var Hackathon_FixtureGenerator_Model_Generator_Container
      */
     protected $container = null;
@@ -16,6 +34,9 @@ class Hackathon_FixtureGenerator_Test_Model_Generator_Container extends EcomDev_
      */
     protected $originalGenerators = array();
 
+    /**
+     *
+     */
     protected function setUp()
     {
         $this->container = Mage::getModel('hackathon_fixturegenerator/generator_container');
@@ -31,6 +52,9 @@ class Hackathon_FixtureGenerator_Test_Model_Generator_Container extends EcomDev_
         );
     }
 
+    /**
+     *
+     */
     public function testAdd()
     {
         $this->assertAttributeEmpty('generators', 'Hackathon_FixtureGenerator_Model_Generator_Container');
@@ -56,6 +80,9 @@ class Hackathon_FixtureGenerator_Test_Model_Generator_Container extends EcomDev_
         );
     }
 
+    /**
+     *
+     */
     public function testRemove()
     {
         EcomDev_Utils_Reflection::setRestrictedPropertyValue(
@@ -129,7 +156,6 @@ class Hackathon_FixtureGenerator_Test_Model_Generator_Container extends EcomDev_
 
     /**
      * Test initialize generators
-     *
      */
     public function testInitializeGenerators()
     {
@@ -147,6 +173,9 @@ class Hackathon_FixtureGenerator_Test_Model_Generator_Container extends EcomDev_
         );
     }
 
+    /**
+     *
+     */
     protected function tearDown()
     {
         EcomDev_Utils_Reflection::setRestrictedPropertyValue(

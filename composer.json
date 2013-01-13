@@ -29,5 +29,14 @@
   },
   "config": {
     "bin-dir": "bin"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://packages.firegento.com"
+    }
+  ],
+  "extra":{
+    "magento-root-dir": "test/"
   }
 }
