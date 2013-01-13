@@ -63,7 +63,7 @@
                         <visibility>4</visibility>
                         <description>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</description>
                         <short_description>Lorem ipsum dolor sit amet.</short_description>
-                        <price>{range:10,50,10}</price>
+                        <price>{range:10:50:10}</price>
                         <name>Virtual</name>
                         <sku>virtual_|{range:1:5:1}</sku>
                     </virtual>
