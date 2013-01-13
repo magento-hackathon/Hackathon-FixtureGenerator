@@ -93,4 +93,27 @@ abstract class Hackathon_FixtureGenerator_Model_Processor_Abstract
 
         return $result;
     }
+
+    /**
+     * Deletes an attribute from required fields array
+     *
+     * @param string $key
+     */
+    protected function dropRequiredKey($key){
+        $index = array_search($key, $this->requiredKeys);
+        if ($index !== false) {
+            array_splice($this->requiredKeys, $index, 1);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Adds an attribute to required fields array
+     *
+     * @param array $key
+     */
+    protected function addRequiredKey($key){
+        array_push($this->requiredKeys, $key);
+    }
 }

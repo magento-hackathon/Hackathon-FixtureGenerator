@@ -1,0 +1,19 @@
+test_generation:
+  bundle:
+    number: 2
+    sku: "bundle_{increment:1}"
+    name: "Bundle {increment:1}"
+test_generation_description:
+  bundle:
+    number: 2
+    sku: "bundle_{increment:1}"
+    name: "Bundle {increment:1}"
+    description: I am a test for a bundle product.
+    short_description: I am a test.
+test_generation_taxclass_status_visibility:
+  bundle:
+    number: 2
+    sku: "bundle_{increment:1}"
+    name: "Bundle {increment:1}"
+    status: 2
+    visibility: 2

@@ -71,6 +71,53 @@
                         <name>Virtual</name>
                         <sku>virtual_|{range:1:5:1}</sku>
                     </virtual>
+                    <downloadable>
+                        <entity_id>{increment:1}</entity_id>
+                        <type_id>downloadable</type_id>
+                        <tax_class_id>1</tax_class_id>
+                        <status>1</status>
+                        <visibility>4</visibility>
+                        <description>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</description>
+                        <short_description>Lorem ipsum dolor sit amet.</short_description>
+                        <price>{range:10,50,10}</price>
+                        <name>Downloadable</name>
+                        <sku>downloadable_|{range:1:5:1}</sku>
+                    </downloadable>
+                    <configurable>
+                        <entity_id>{increment:1}</entity_id>
+                        <type_id>configurable</type_id>
+                        <tax_class_id>1</tax_class_id>
+                        <status>1</status>
+                        <visibility>4</visibility>
+                        <description>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</description>
+                        <short_description>Lorem ipsum dolor sit amet.</short_description>
+                        <price>{range:10,50,10}</price>
+                        <name>Configurable</name>
+                        <sku>configurable_|{range:1:5:1}</sku>
+                    </configurable>
+                    <grouped>
+                        <entity_id>{increment:1}</entity_id>
+                        <type_id>grouped</type_id>
+                        <tax_class_id>1</tax_class_id>
+                        <status>1</status>
+                        <visibility>4</visibility>
+                        <description>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</description>
+                        <short_description>Lorem ipsum dolor sit amet.</short_description>
+                        <price>{range:10,50,10}</price>
+                        <name>Grouped</name>
+                        <sku>grouped_|{range:1:5:1}</sku>
+                    </grouped>
+                    <bundle>
+                        <entity_id>{increment:1}</entity_id>
+                        <type_id>bundle</type_id>
+                        <status>1</status>
+                        <visibility>4</visibility>
+                        <description>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</description>
+                        <short_description>Lorem ipsum dolor sit amet.</short_description>
+                        <price>{range:10,50,10}</price>
+                        <name>Bundle</name>
+                        <sku>bundle_|{range:1:5:1}</sku>
+                    </bundle>
                 </product>
             </processor>
         </testdata>

@@ -1,12 +1,12 @@
 <?php
 
-class Hackathon_FixtureGenerator_Test_Model_Processor_Product_Virtual extends EcomDev_PHPUnit_Test_Case {
+class Hackathon_FixtureGenerator_Test_Model_Processor_Product_Downloadable extends EcomDev_PHPUnit_Test_Case {
 
     protected $processor = null;
 
     protected function setUp()
     {
-        $this->processor = Mage::getModel('hackathon_fixturegenerator/processor_product_virtual');
+        $this->processor = Mage::getModel('hackathon_fixturegenerator/processor_product_downloadable');
     }
 
     /**
@@ -27,5 +27,6 @@ class Hackathon_FixtureGenerator_Test_Model_Processor_Product_Virtual extends Ec
                 'Assertation for product ' . $i . ' failed'
             );
         }
+
     }
 }

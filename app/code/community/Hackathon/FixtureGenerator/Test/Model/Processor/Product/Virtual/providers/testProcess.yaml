@@ -1,4 +1,4 @@
-test_generation:
+virtual_generation:
   - number: 3
     sku: "virtual_{increment:1}"
     name: "Virtual |{range:1:10:1}"
