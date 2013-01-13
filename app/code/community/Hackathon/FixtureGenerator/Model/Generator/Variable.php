@@ -1,6 +1,6 @@
 <?php
 /**
- * ${PROJECT}
+ * Fixture Generator module for PHP Unit test suite for Magento
  *
  * NOTICE OF LICENSE
  *
@@ -9,13 +9,17 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/osl-3.0.php
  *
- * @category   ${CATEGORY}
- * @package    ${PACKAGE}
- * @copyright  Copyright (c) 2013 EcomDev BV (http://www.ecomdev.org)
+ * @category   Hackathon
+ * @package    Hackathon_FixtureGenerator
+ * @author     Peter Jaap Blaakmeer <https://github.com/peterjaap>
+ * @author     Ivan Chepurnyi <https://github.com/IvanChepurnyi>
+ * @author     Dima Janzen <https://github.com/dimajanzen>
+ * @author     Rouven Alexander Rieker <https://github.com/therouv>
+ * @author     Michael Ryvlin <https://github.com/mryvlin>
+ * @copyright  2013 Hackathon Dev Team (http://www.magento-hackathon.de/)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * @author     Ivan Chepurnyi <ivan.chepurnyi@ecomdev.org>
+ * @link       https://github.com/magento-hackathon/Hackathon-FixtureGenerator/
  */
-
 class Hackathon_FixtureGenerator_Model_Generator_Variable extends Hackathon_FixtureGenerator_Model_Generator_Abstract
 {
     public function generate(array $data)

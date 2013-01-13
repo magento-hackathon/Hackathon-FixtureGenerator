@@ -1,0 +1,23 @@
+three_nested_levels:
+  path: variable/name/value
+  value: somevalue
+  array: &id001
+    other:
+      path: value
+      other_structure: value2
+    nice_path:
+      path: value
+    nice_path_with_slash:
+      /sleshed_path: some_value
+existing_nested_level:
+  - other/path
+  - new_value
+  - *id001
+set_slashed_path:
+  - nice_path_with_slash/\/sleshed_path
+  - new_value
+  - *id001
+set_key_value:
+  - data
+  - value
+  - *id001

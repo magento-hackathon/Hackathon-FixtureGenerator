@@ -1,0 +1,36 @@
+test_generation_customers:
+  customers:
+    -
+      entity_id: 1
+      website_id: 1
+      group_id: 1
+      firstname: "Test"
+      lastname: "Customer 1"
+      email: test.customer1@testcompany.com
+      password: password12345
+    -
+      entity_id: 2
+      website_id: 1
+      group_id: 1
+      firstname: "Test"
+      lastname: "Customer 2"
+      email: test.customer2@testcompany.com
+      password: password12345
+test_generation_customers_default_data:
+  customers:
+    -
+      entity_id: 1
+      website_id: 1
+      group_id: 1
+      firstname: "Firstname"
+      lastname: "Lastname 1"
+      email: firstname.lastname1@example.org
+      password: password12345
+    -
+      entity_id: 2
+      website_id: 1
+      group_id: 1
+      firstname: "Firstname"
+      lastname: "Lastname 2"
+      email: firstname.lastname2@example.org
+      password: password12345

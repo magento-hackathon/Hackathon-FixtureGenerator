@@ -1,4 +1,27 @@
 <?xml version="1.0"?>
+<!--
+/**
+ * Fixture Generator module for PHP Unit test suite for Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Hackathon
+ * @package    Hackathon_FixtureGenerator
+ * @author     Peter Jaap Blaakmeer <https://github.com/peterjaap>
+ * @author     Ivan Chepurnyi <https://github.com/IvanChepurnyi>
+ * @author     Dima Janzen <https://github.com/dimajanzen>
+ * @author     Rouven Alexander Rieker <https://github.com/therouv>
+ * @author     Michael Ryvlin <https://github.com/mryvlin>
+ * @copyright  2013 Hackathon Dev Team (http://www.magento-hackathon.de/)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @link       https://github.com/magento-hackathon/Hackathon-FixtureGenerator/
+ */
+-->
 <config>
     <modules>
         <Hackathon_FixtureGenerator>
@@ -11,6 +34,11 @@
                 <class>Hackathon_FixtureGenerator_Model</class>
             </hackathon_fixturegenerator>
         </models>
+        <helpers>
+            <hackathon_fixturegenerator>
+                <class>Hackathon_FixtureGenerator_Helper</class>
+            </hackathon_fixturegenerator>
+        </helpers>
     </global>
     <phpunit>
         <suite>
@@ -20,6 +48,31 @@
         </suite>
         <testdata>
             <processor>
+                <customer>
+                    <entity_id>{increment:1}</entity_id>
+                    <website_id>1</website_id>
+                    <group_id>1</group_id>
+                    <firstname>Firstname</firstname>
+                    <lastname>Lastname {$entity_id}</lastname>
+                    <email>firstname.lastname{$entity_id}@example.org</email>
+                    <password>password12345</password>
+                </customer>
+                <customer_address>
+                    <entity_id>{increment:1}</entity_id>
+                    <parent_id>{$entity_id}</parent_id>
+                    <firstname>Firstname</firstname>
+                    <lastname>Lastname {$entity_id}</lastname>
+                    <street>Test Street {$entity_id}</street>
+                    <city>Test City</city>
+                    <country_id>US</country_id>
+                    <region_id>23</region_id>
+                    <postcode>{range:10000:50000:1000}</postcode>
+                    <telephone>0123456789</telephone>
+                </customer_address>
+                <category>
+                    <entity_id>{increment:1}</entity_id>
+                    <name>name</name>
+                </category>
                 <product>
                     <simple>
                         <entity_id>{increment:1}</entity_id>
