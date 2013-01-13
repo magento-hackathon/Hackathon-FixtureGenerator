@@ -37,6 +37,6 @@
     }
   ],
   "extra":{
-    "magento-root-dir": "htdocs/"
+    "magento-root-dir": "test/"
   }
 }
