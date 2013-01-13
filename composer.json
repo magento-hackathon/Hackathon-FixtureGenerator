@@ -1,8 +1,33 @@
 {
-    "require-dev": {
-        "ecomdev/mage-ci": "master-dev"
+  "name": "hackathon/fixturegenerator",
+  "license": ["OSL-3.0"],
+  "type": "magento-module",
+  "description": "This module generates fixtures for your PHPUnit tests with Magento on-the-fly.",
+  "homepage": "https://github.com/magento-hackathon/Hackathon-FixtureGenerator/",
+  "authors":[
+    {
+      "name": "Peter Jaap Blaakmeer"
     },
-    "config": {
-        "bin-dir": "bin"
+    {
+      "name": "Ivan Chepurnyi"
+    },
+    {
+      "name": "Dima Janzen"
+    },
+    {
+      "name": "Rouven Alexander Rieker"
+    },
+    {
+      "name": "Michael Ryvlin"
     }
+  ],
+  "require": {
+    "magento-hackathon/magento-composer-installer": "dev-master"
+  },
+  "require-dev": {
+        "ecomdev/mage-ci": "master-dev"
+  },
+  "config": {
+    "bin-dir": "bin"
+  }
 }
