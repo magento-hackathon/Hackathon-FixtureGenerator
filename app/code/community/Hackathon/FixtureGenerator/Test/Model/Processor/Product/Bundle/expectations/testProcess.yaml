@@ -1,0 +1,63 @@
+test_generation:
+  product_1:
+    entity_id: 1
+    type_id: "bundle"
+    sku: "bundle_1"
+    name: "Bundle 1"
+    status: 1
+    visibility: 4
+    description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+    short_description: Lorem ipsum dolor sit amet.
+    price: 10
+  product_2:
+    entity_id: 2
+    type_id: "bundle"
+    sku: "bundle_2"
+    name: "Bundle 2"
+    status: 1
+    visibility: 4
+    description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+    short_description: Lorem ipsum dolor sit amet.
+    price: 20
+test_generation_description:
+  product_1:
+    entity_id: 1
+    type_id: "bundle"
+    sku: "bundle_1"
+    name: "Bundle 1"
+    status: 1
+    visibility: 4
+    description: I am a test for a bundle product.
+    short_description: I am a test.
+    price: 10
+  product_2:
+    entity_id: 2
+    type_id: "bundle"
+    sku: "bundle_2"
+    name: "Bundle 2"
+    status: 1
+    visibility: 4
+    description: I am a test for a bundle product.
+    short_description: I am a test.
+    price: 20
+test_generation_taxclass_status_visibility:
+  product_1:
+    entity_id: 1
+    type_id: "bundle"
+    sku: "bundle_1"
+    name: "Bundle 1"
+    status: 2
+    visibility: 2
+    description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+    short_description: Lorem ipsum dolor sit amet.
+    price: 10
+  product_2:
+    entity_id: 2
+    type_id: "bundle"
+    sku: "bundle_2"
+    name: "Bundle 2"
+    status: 2
+    visibility: 2
+    description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+    short_description: Lorem ipsum dolor sit amet.
+    price: 20

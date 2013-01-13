@@ -22,7 +22,7 @@
  */
 abstract class Hackathon_FixtureGenerator_Model_Processor_Product_Abstract
     extends Hackathon_FixtureGenerator_Model_Processor_Abstract
-	implements Hackathon_FixtureGenerator_Model_Processor_Interface
+    implements Hackathon_FixtureGenerator_Model_Processor_Interface
 {
     /**
      * @var array

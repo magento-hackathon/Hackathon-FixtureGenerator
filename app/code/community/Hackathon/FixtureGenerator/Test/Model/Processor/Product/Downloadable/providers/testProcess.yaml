@@ -1,0 +1,24 @@
+downloadable_generation:
+  downloadable:
+    number: 2
+    sku: "downloadable_{increment:1}"
+    name: "Downloadable {increment:1}"
+    description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+    short_description: Lorem ipsum dolor sit amet.
+downloadable_generation_description:
+  downloadable:
+    number: 2
+    sku: "downloadable_{increment:1}"
+    name: "Downloadable {increment:1}"
+    description: I am a test for a super cool extension.
+    short_description: I am a test.
+downloadable_generation_taxclass_status_visibility:
+  downloadable:
+    number: 2
+    sku: "downloadable_{increment:1}"
+    name: "Downloadable {increment:1}"
+    tax_class_id: 1
+    status: 2
+    visibility: 2
+    description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+    short_description: Lorem ipsum dolor sit amet.

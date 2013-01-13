@@ -22,30 +22,14 @@
  */
 class Hackathon_FixtureGenerator_Model_Processor_Product_Virtual
     extends Hackathon_FixtureGenerator_Model_Processor_Product_Abstract
-	implements Hackathon_FixtureGenerator_Model_Processor_Interface
+    implements Hackathon_FixtureGenerator_Model_Processor_Interface
 {
-    /**
-     * @var string
-     */
+
     protected $type = 'product/virtual';
 
-    /**
-     * @var string
-     */
     protected $productType = 'virtual';
 
-    /**
-     * @var array
-     */
-    protected $requiredKeys = array(
-        'entity_id',
-        'type_id',
-        'description',
-        'price',
-        'tax_class_id',
-        'status',
-        'visibility',
-        'description',
-        'short_description'
-    );
+    public function __construct(){
+        $this->dropRequiredKey('weight');
+    }
 }
