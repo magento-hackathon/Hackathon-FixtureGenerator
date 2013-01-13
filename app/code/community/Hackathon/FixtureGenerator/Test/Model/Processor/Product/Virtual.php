@@ -20,11 +20,16 @@
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link       https://github.com/magento-hackathon/Hackathon-FixtureGenerator/
  */
-
-class Hackathon_FixtureGenerator_Test_Model_Processor_Product_Virtual extends EcomDev_PHPUnit_Test_Case {
-
+class Hackathon_FixtureGenerator_Test_Model_Processor_Product_Virtual extends EcomDev_PHPUnit_Test_Case
+{
+    /**
+     * @var null
+     */
     protected $processor = null;
 
+    /**
+     *
+     */
     protected function setUp()
     {
         $this->processor = Mage::getModel('hackathon_fixturegenerator/processor_product_virtual');

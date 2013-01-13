@@ -124,7 +124,8 @@ abstract class Hackathon_FixtureGenerator_Model_Processor_Abstract
      *
      * @param string $key
      */
-    protected function dropRequiredKey($key){
+    protected function dropRequiredKey($key)
+    {
         $index = array_search($key, $this->requiredKeys);
         if ($index !== false) {
             array_splice($this->requiredKeys, $index, 1);
@@ -138,7 +139,8 @@ abstract class Hackathon_FixtureGenerator_Model_Processor_Abstract
      *
      * @param array $key
      */
-    protected function addRequiredKey($key){
+    protected function addRequiredKey($key)
+    {
         array_push($this->requiredKeys, $key);
     }
 }

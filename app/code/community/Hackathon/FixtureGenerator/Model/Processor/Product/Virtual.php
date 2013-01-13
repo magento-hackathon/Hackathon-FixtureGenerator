@@ -24,12 +24,21 @@ class Hackathon_FixtureGenerator_Model_Processor_Product_Virtual
     extends Hackathon_FixtureGenerator_Model_Processor_Product_Abstract
     implements Hackathon_FixtureGenerator_Model_Processor_Interface
 {
-
+    /**
+     * @var string
+     */
     protected $type = 'product/virtual';
 
+    /**
+     * @var string
+     */
     protected $productType = 'virtual';
 
-    public function __construct(){
+    /**
+     *
+     */
+    public function __construct()
+    {
         $this->dropRequiredKey('weight');
     }
 }
