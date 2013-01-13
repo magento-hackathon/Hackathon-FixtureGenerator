@@ -1,0 +1,10 @@
+test_generation_addresses:
+  -
+    number: 2
+    firstname: "Test"
+    lastname:  "Customer {$entity_id}"
+    country_id: "DE"
+    region_id: 80
+test_generation_addresses_default_data:
+  -
+    number: 2

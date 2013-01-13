@@ -1,0 +1,21 @@
+"{increment:1}|{random:4,2}":
+  - Hackathon_FixtureGenerator_Model_Generator_Increment
+  - Hackathon_FixtureGenerator_Model_Generator_Random
+"{increment:1}|{random:4,2}":
+  - Hackathon_FixtureGenerator_Model_Generator_Increment
+  - Hackathon_FixtureGenerator_Model_Generator_Random
+"{increment:1}|somestring|{$variable}|$notvariable":
+  - Hackathon_FixtureGenerator_Model_Generator_Increment
+  - somestring
+  - Hackathon_FixtureGenerator_Model_Generator_Variable
+  - $notvariable
+"{increment:1}|somestring|{$variable}\|$notvariable":
+  - Hackathon_FixtureGenerator_Model_Generator_Increment
+  - somestring
+  - Hackathon_FixtureGenerator_Model_Generator_Variable
+"{increment:1}|somestring|\|$notvariable":
+  - Hackathon_FixtureGenerator_Model_Generator_Increment
+  - somestring
+  - |$notvariable
+
+

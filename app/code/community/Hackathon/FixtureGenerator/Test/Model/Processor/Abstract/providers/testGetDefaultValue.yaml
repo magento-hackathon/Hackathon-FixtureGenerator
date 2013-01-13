@@ -1,0 +1,15 @@
+-
+  - product
+  - sku
+-
+  - product
+  - price
+-
+  - product
+  - name
+-
+  - customer
+  - firstname
+-
+  - customer
+  - lastname

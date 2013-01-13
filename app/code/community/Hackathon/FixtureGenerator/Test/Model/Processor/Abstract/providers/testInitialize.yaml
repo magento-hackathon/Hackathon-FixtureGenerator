@@ -1,0 +1,10 @@
+-
+  - sku: "{$entity_id}"
+    price: "{range:10,20,0.50}"
+-
+  - price: "{range:10,20,0.50}"
+    name: "{$sku}"
+-
+  - firstname: "John {$entity_id}"
+-
+  - lastname: "Doe"

@@ -1,0 +1,14 @@
+generate_one:
+  - generate:
+      - product:
+          simple:
+            number: 2
+            sku: "test_{increment:1}"
+            name: "Test {increment:1}"
+      - category:
+          number: 4
+          name: "Category {range:10,40,10}"
+      - category:
+          number: 4
+          entity_id: "{increment:5}"
+          name: "Category {range:10,40,10}"

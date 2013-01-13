@@ -1,4 +1,12 @@
-test_replacement:
+test_range:
   - sku: 5464
   - "{range:1,5,1}"
+  - 10
+test_range_comma_10:
+  - sku: 5464
+  - "{range:10:50:5}"
+  - 10
+test_range_comma_10_prefix:
+  - sku: 5464
+  - "Prefix {range:10:50:5}"
   - 10

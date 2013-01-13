@@ -1,0 +1,34 @@
+virtual_generation:
+  product_1:
+    entity_id: 1
+    type_id: "virtual"
+    sku: "virtual_1"
+    name: "Virtual 1"
+    tax_class_id: 1
+    status: 1
+    visibility: 4
+    description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+    short_description: Lorem ipsum dolor sit amet.
+    price: 10
+  product_2:
+    entity_id: 2
+    type_id: "virtual"
+    sku: "virtual_2"
+    name: "Virtual 2"
+    tax_class_id: 1
+    status: 1
+    visibility: 4
+    description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+    short_description: Lorem ipsum dolor sit amet.
+    price: 20
+  product_3:
+    entity_id: 3
+    type_id: "virtual"
+    sku: "virtual_3"
+    name: "Virtual 3"
+    tax_class_id: 1
+    status: 1
+    visibility: 4
+    description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+    short_description: Lorem ipsum dolor sit amet.
+    price: 30

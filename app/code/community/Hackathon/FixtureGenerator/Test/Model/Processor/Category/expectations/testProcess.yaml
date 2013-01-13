@@ -1,0 +1,19 @@
+test_generation:
+  categories:
+    -
+      entity_id: 1
+      name: "name_1"
+    -
+      entity_id: 2
+      name: "name_2"
+    -
+      entity_id: 3
+      name: "name_3"
+test_generation_categories_default_data:
+  categories:
+    -
+      entity_id: 1
+      name: "name"
+    -
+      entity_id: 2
+      name: "name"

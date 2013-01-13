@@ -1,4 +1,4 @@
-test_replacement: 
+test_range:
   iteration_1: 1
   iteration_2: 2
   iteration_3: 3
@@ -9,3 +9,25 @@ test_replacement:
   iteration_8: 3
   iteration_9: 4
   iteration_10: 5
+test_range_comma_10:
+  iteration_1: 10
+  iteration_2: 15
+  iteration_3: 20
+  iteration_4: 25
+  iteration_5: 30
+  iteration_6: 35
+  iteration_7: 40
+  iteration_8: 45
+  iteration_9: 50
+  iteration_10: 10
+test_range_comma_10_prefix:
+  iteration_1: Prefix 10
+  iteration_2: Prefix 15
+  iteration_3: Prefix 20
+  iteration_4: Prefix 25
+  iteration_5: Prefix 30
+  iteration_6: Prefix 35
+  iteration_7: Prefix 40
+  iteration_8: Prefix 45
+  iteration_9: Prefix 50
+  iteration_10: Prefix 10

@@ -1,0 +1,20 @@
+test_generation:
+  grouped:
+    number: 2
+    sku: "grouped_{increment:1}"
+    name: "Grouped {increment:1}"
+test_generation_description:
+  grouped:
+    number: 2
+    sku: "grouped_{increment:1}"
+    name: "Grouped {increment:1}"
+    description: I am a test for a grouped product.
+    short_description: I am a test.
+test_generation_taxclass_status_visibility:
+  grouped:
+    number: 2
+    sku: "grouped_{increment:1}"
+    name: "Grouped {increment:1}"
+    tax_class_id: 1
+    status: 2
+    visibility: 2

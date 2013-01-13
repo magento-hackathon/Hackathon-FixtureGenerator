@@ -1,0 +1,20 @@
+test_generation:
+  configurable:
+    number: 2
+    sku: "configurable_{increment:1}"
+    name: "Configurable {increment:1}"
+test_generation_description:
+  configurable:
+    number: 2
+    sku: "configurable_{increment:1}"
+    name: "Configurable {increment:1}"
+    description: I am a test for a configurable product.
+    short_description: I am a test.
+test_generation_taxclass_status_visibility:
+  configurable:
+    number: 2
+    sku: "configurable_{increment:1}"
+    name: "Configurable {increment:1}"
+    tax_class_id: 1
+    status: 2
+    visibility: 2

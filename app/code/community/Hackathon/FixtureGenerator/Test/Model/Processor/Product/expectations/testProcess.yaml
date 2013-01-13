@@ -1,0 +1,150 @@
+test_generation_virtual:
+  products:
+    -
+      entity_id: 1
+      type_id: "virtual"
+      sku: "virtual_1"
+      name: "Virtual 1"
+      tax_class_id: 1
+      status: 1
+      visibility: 4
+      short_description: "Lorem ipsum dolor sit amet."
+      description: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+      price: 10
+    -
+      entity_id: 2
+      type_id: "virtual"
+      sku: "virtual_2"
+      name: "Virtual 2"
+      tax_class_id: 1
+      status: 1
+      visibility: 4
+      short_description: "Lorem ipsum dolor sit amet."
+      description: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+      price: 20
+    -
+      entity_id: 3
+      type_id: "virtual"
+      sku: "virtual_3"
+      name: "Virtual 3"
+      tax_class_id: 1
+      status: 1
+      visibility: 4
+      short_description: "Lorem ipsum dolor sit amet."
+      description: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+      price: 30
+test_generation_simple:
+  products:
+    -
+      entity_id: 1
+      type_id: "simple"
+      sku: "test_1"
+      name: "Test 1"
+      tax_class_id: 1
+      status: 1
+      visibility: 4
+      description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+      short_description: Lorem ipsum dolor sit amet.
+      weight: "1"
+      price: 10
+    -
+      entity_id: 2
+      type_id: "simple"
+      sku: "test_2"
+      name: "Test 2"
+      tax_class_id: 1
+      status: 1
+      visibility: 4
+      description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+      short_description: Lorem ipsum dolor sit amet.
+      weight: "1"
+      price: 20
+test_generation_description:
+  products:
+    -
+      entity_id: 1
+      type_id: "simple"
+      sku: "test_1"
+      name: "Test 1"
+      tax_class_id: 1
+      status: 1
+      visibility: 4
+      description: I am a test for a super cool extension.
+      short_description: I am a test.
+      weight: "1"
+      price: 10
+    -
+      entity_id: 2
+      type_id: "simple"
+      sku: "test_2"
+      name: "Test 2"
+      tax_class_id: 1
+      status: 1
+      visibility: 4
+      description: I am a test for a super cool extension.
+      short_description: I am a test.
+      weight: "1"
+      price: 20
+test_generation_taxclass_status_visibility:
+  products:
+    -
+      entity_id: 1
+      type_id: "simple"
+      sku: "test_1"
+      name: "Test 1"
+      tax_class_id: 1
+      status: 2
+      visibility: 2
+      description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+      short_description: Lorem ipsum dolor sit amet.
+      weight: "1"
+      price: 10
+    -
+      entity_id: 2
+      type_id: "simple"
+      sku: "test_2"
+      name: "Test 2"
+      tax_class_id: 1
+      status: 2
+      visibility: 2
+      description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+      short_description: Lorem ipsum dolor sit amet.
+      weight: "1"
+      price: 20
+test_generation_combined:
+  products:
+    -
+      entity_id: 1
+      type_id: "simple"
+      sku: "test_1"
+      name: "Test 1"
+      tax_class_id: 1
+      status: 2
+      visibility: 2
+      description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+      short_description: Lorem ipsum dolor sit amet.
+      weight: "1"
+      price: 10
+    -
+      entity_id: 2
+      type_id: "simple"
+      sku: "test_2"
+      name: "Test 2"
+      tax_class_id: 1
+      status: 2
+      visibility: 2
+      description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+      short_description: Lorem ipsum dolor sit amet.
+      weight: "1"
+      price: 20
+    -
+      entity_id: 3
+      type_id: "virtual"
+      sku: "virtual_3"
+      name: "Virtual 3"
+      tax_class_id: 1
+      status: 2
+      visibility: 2
+      short_description: "Lorem ipsum dolor sit amet."
+      description: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+      price: 30

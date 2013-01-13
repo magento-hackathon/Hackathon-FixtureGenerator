@@ -1,6 +1,9 @@
-test_replacement1:
+test_random_two_params:
   from: 2
   to: 4
-test_replacement2:
+test_random_two_params_comma:
+  from: 2
+  to: 4
+test_random_invalid:
   from: 0
   to: 0

@@ -1,0 +1,9 @@
+-
+  - "{increment:1}|{range:2,4,1}"
+  - {}
+-
+  - "{increment:1}|somestring|{$variable}|$notvariable"
+  - {variable: 3}
+- # In case of pipe is escaped
+  - "{increment:1}|somestring|{$variable}\|$notvariable"
+  - {variable: none}
