@@ -1,4 +1,4 @@
 test_generation:
   - number: 3
-    id: "{$entity_id}"
+    entity_id: "{increment:1}"
     name: "name_{$entity_id}"

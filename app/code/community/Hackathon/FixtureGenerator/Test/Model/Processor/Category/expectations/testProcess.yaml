@@ -1,10 +1,11 @@
 test_generation:
-  category_1:
-    entity_id: 1
-    name: "name_1"
-  category_2:
-    entity_id: 2
-    type_id: "name_2"
-  category_3:
-    entity_id: 3
-    type_id: "name_3"
+  categories:
+    -
+      entity_id: 1
+      name: "name_1"
+    -
+      entity_id: 2
+      name: "name_2"
+    -
+      entity_id: 3
+      name: "name_3"
