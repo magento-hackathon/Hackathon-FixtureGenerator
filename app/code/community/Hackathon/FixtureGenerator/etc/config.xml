@@ -20,6 +20,10 @@
         </suite>
         <testdata>
             <processor>
+                <category>
+                    <entity_id>{increment:1}</entity_id>
+                    <name>name</name>
+                </category>
                 <product>
                     <simple>
                         <entity_id>{increment:1}</entity_id>

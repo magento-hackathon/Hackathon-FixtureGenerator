@@ -1,9 +1,11 @@
 <?php
 class Hackathon_FixtureGenerator_Model_Processor_Category extends  Hackathon_FixtureGenerator_Model_Processor_Abstract
 {
-  protected $requiredKeys = array(
-      'entity_id',
-      'name'
+    protected $type = "category";
+
+    protected $requiredKeys = array(
+        'entity_id',
+        'name'
     );
 
     /**
