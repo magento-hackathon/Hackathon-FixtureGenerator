@@ -1,0 +1,9 @@
+test_generation_customers:
+  -
+    number: 2
+    firstname: "Test"
+    lastname:  "Customer {$entity_id}"
+    email: "test.customer{$entity_id}@testcompany.com"
+test_generation_customers_default_data:
+  -
+    number: 2

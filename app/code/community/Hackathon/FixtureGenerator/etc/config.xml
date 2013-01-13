@@ -20,6 +20,15 @@
         </suite>
         <testdata>
             <processor>
+                <customer>
+                    <entity_id>{increment:1}</entity_id>
+                    <website_id>1</website_id>
+                    <group_id>1</group_id>
+                    <firstname>Firstname</firstname>
+                    <lastname>Lastname {$entity_id}</lastname>
+                    <email>firstname.lastname{$entity_id}@example.org</email>
+                    <password>password12345</password>
+                </customer>
                 <product>
                     <simple>
                         <entity_id>{increment:1}</entity_id>
