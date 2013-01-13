@@ -1,0 +1,48 @@
+test_generation_addresses:
+  addresses:
+    -
+      entity_id: 1
+      parent_id: 1
+      firstname: "Test"
+      lastname: "Customer 1"
+      street: "Test Street 1"
+      city: "Test City"
+      country_id: "DE"
+      region_id: 80
+      postcode: 10000
+      telephone: 0123456789
+    -
+      entity_id: 2
+      parent_id: 2
+      firstname: "Test"
+      lastname: "Customer 2"
+      street: "Test Street 2"
+      city: "Test City"
+      country_id: "DE"
+      region_id: 80
+      postcode: 11000
+      telephone: 0123456789
+test_generation_addresses_default_data:
+  addresses:
+    -
+      entity_id: 1
+      parent_id: 1
+      firstname: "Firstname"
+      lastname: "Lastname 1"
+      street: "Test Street 1"
+      city: "Test City"
+      country_id: "US"
+      region_id: 23
+      postcode: 10000
+      telephone: 0123456789
+    -
+      entity_id: 2
+      parent_id: 2
+      firstname: "Firstname"
+      lastname: "Lastname 2"
+      street: "Test Street 2"
+      city: "Test City"
+      country_id: "US"
+      region_id: 23
+      postcode: 11000
+      telephone: 0123456789
