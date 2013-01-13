@@ -1,0 +1,6 @@
+generate:
+  - product:
+      simple:
+        number: 2
+        sku: "test_{increment:1}"
+        name: "Test {increment:1}"

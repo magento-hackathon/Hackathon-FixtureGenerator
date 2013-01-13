@@ -45,6 +45,35 @@
             <modules>
                 <Hackathon_FixtureGenerator/>
             </modules>
+            <fixture>
+                <generator>
+                    <processors>
+                        <product>
+                            <type>eav</type>
+                            <path>catalog_product</path>
+                            <model>hackathon_fixturegenerator/processor_product</model>
+                        </product>
+                        <category>
+                            <type>eav</type>
+                            <path>catalog_category</path>
+                            <model>hackathon_fixturegenerator/processor_category</model>
+                        </category>
+                        <customer>
+                            <type>eav</type>
+                            <path>customer</path>
+                            <model>hackathon_fixturegenerator/processor_customer</model>
+                        </customer>
+                        <customer_address>
+                            <type>eav</type>
+                            <path>customer_address</path>
+                            <model>hackathon_fixturegenerator/processor_customer_address</model>
+                        </customer_address>
+                    </processors>
+                </generator>
+                <processors>
+                    <generate>hackathon_fixturegenerator/processor</generate>
+                </processors>
+            </fixture>
         </suite>
         <testdata>
             <processor>

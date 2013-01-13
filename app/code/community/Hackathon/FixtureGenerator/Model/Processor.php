@@ -20,20 +20,26 @@
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link       https://github.com/magento-hackathon/Hackathon-FixtureGenerator/
  */
+
+/**
+ * Fixture processor class
+ */
 class Hackathon_FixtureGenerator_Model_Processor implements EcomDev_PHPUnit_Model_Fixture_Processor_Interface
 {
-    protected $fixtures = array(
-        'product' => array(
-            'type' => 'eav',
-            'path' => 'catalog_product',
-            'model' => 'hackathon_fixturegenerator/processor_product'
-        ),
-        'category' => array(
-            'type' => 'eav',
-            'path' => 'catalog_category',
-            'model' => 'hackathon_fixturegenerator/processor_category'
-        )
-    );
+    const XML_PATH_PROCESSORS = 'phpunit/suite/fixture/generator/processors';
+
+    protected $fixtures = array();
+
+    public function __construct()
+    {
+        foreach (Mage::getConfig()->getNode(self::XML_PATH_PROCESSORS)->children() as $processor) {
+            $this->fixtures[$processor->getName()] = array(
+                'type' => (string)$processor->type,
+                'path' => (string)$processor->path,
+                'model' => (string)$processor->model
+            );
+        }
+    }
 
     /**
      * Applies data from fixture file
