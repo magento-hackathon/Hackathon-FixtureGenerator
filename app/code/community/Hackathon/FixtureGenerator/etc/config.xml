@@ -64,6 +64,10 @@
                     <postcode>{range:10000:50000:1000}</postcode>
                     <telephone>0123456789</telephone>
                 </customer_address>
+                <category>
+                    <entity_id>{increment:1}</entity_id>
+                    <name>name</name>
+                </category>
                 <product>
                     <simple>
                         <entity_id>{increment:1}</entity_id>
