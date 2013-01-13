@@ -1,6 +1,10 @@
-test_replacement1:
-  - id: 1
-  - {random:2:4}
-test_replacement2:
-  - id: 2
-  - {random:2}
+test_random_two_params:
+  - sku: 5464
+  - "{random:2:4}"
+test_random_two_params_comma:
+  - sku: 5464
+  - "{random:2,4}"
+test_random_invalid:
+  - sku: 5464
+  - "{random:2}"
+

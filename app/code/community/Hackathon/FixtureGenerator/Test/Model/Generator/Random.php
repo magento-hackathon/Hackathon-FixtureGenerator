@@ -2,8 +2,6 @@
 
 class Hackathon_FixtureGenerator_Test_Model_Generator_Random extends EcomDev_PHPUnit_Test_Case
 {
-    protected $generator = null;
-
     /**
      * @param array $currentRow
      * @param string $string
@@ -12,14 +10,11 @@ class Hackathon_FixtureGenerator_Test_Model_Generator_Random extends EcomDev_PHP
     public function testGenerate(array $currentRow, $string)
     {
 
-		$this->generator = Mage::getModel('hackathon_fixturegenerator/generator_random');
-        $dataSet = $this->readAttribute($this, 'dataName');
+		$generator = new Hackathon_FixtureGenerator_Model_Generator_Random($string);
+		$generatedValue = $generator->generate($currentRow);
 
-		$expextedRange = $this->expected()->getData($dataSet);
+		$this->assertGreaterThanOrEqual($this->expected('auto')->getFrom(), $generatedValue);
+		$this->assertLessThanOrEqual($this->expected('auto')->getTo(), $generatedValue);
 
-		$generatedValue = $this->generator->generate($string);
-
-		$this->assertGreaterThanOrEqual($expextedRange['from'], $generatedValue);
-		$this->assertLessThanOrEqual($expextedRange['to'], $generatedValue);
     }
 }

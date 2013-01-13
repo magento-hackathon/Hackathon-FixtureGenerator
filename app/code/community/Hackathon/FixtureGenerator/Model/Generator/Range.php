@@ -9,7 +9,7 @@ class Hackathon_FixtureGenerator_Model_Generator_Range extends Hackathon_Fixture
 	{
 		$this->format = $format;
 		
-        if (preg_match_all('/\\{range\:(.*)\,(.*),(.*)\\}/', $format, $vars)) {
+        if (preg_match_all('/\\{range\:(.*)[,\:](.*)[,\:](.*)\\}/', $format, $vars)) {
         	$from = $vars[1][0];
 			$to = $vars[2][0];
 			$step = $vars[3][0];
