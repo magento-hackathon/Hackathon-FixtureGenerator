@@ -1,0 +1,4 @@
+test_generation:
+  - number: 3
+    id: "{$entity_id}"
+    name: "name_{$entity_id}"
