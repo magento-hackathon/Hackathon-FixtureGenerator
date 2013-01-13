@@ -20,7 +20,7 @@ Requirements
 
 Compatibility
 -------------
-- Magento >= 1.7
+- Magento >= 1.4
 
 Installation Instructions
 -------------------------

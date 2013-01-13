@@ -34,6 +34,11 @@
                 <class>Hackathon_FixtureGenerator_Model</class>
             </hackathon_fixturegenerator>
         </models>
+        <helpers>
+            <hackathon_fixturegenerator>
+                <class>Hackathon_FixtureGenerator_Helper</class>
+            </hackathon_fixturegenerator>
+        </helpers>
     </global>
     <phpunit>
         <suite>

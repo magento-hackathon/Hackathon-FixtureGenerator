@@ -1,0 +1,66 @@
+generate_one:
+  fixture:
+    generate:
+      - product:
+          simple:
+            number: 2
+            sku: "test_{increment:1}"
+            name: "Test {increment:1}"
+      - category:
+          number: 4
+          name: "Category {range:10,40,10}"
+      - category:
+          number: 4
+          entity_id: "{increment:5}"
+          name: "Category {range:10,40,10}"
+    eav:
+      catalog_product:
+        -
+          entity_id: 1
+          type_id: "simple"
+          sku: "test_1"
+          name: "Test 1"
+          tax_class_id: 1
+          status: 1
+          visibility: 4
+          description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+          short_description: Lorem ipsum dolor sit amet.
+          weight: "1"
+          price: 10
+        -
+          entity_id: 2
+          type_id: "simple"
+          sku: "test_2"
+          name: "Test 2"
+          tax_class_id: 1
+          status: 1
+          visibility: 4
+          description: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+          short_description: Lorem ipsum dolor sit amet.
+          weight: "1"
+          price: 20
+      catalog_category:
+        -
+          entity_id: 1
+          name: "Category 10"
+        -
+          entity_id: 2
+          name: "Category 20"
+        -
+          entity_id: 3
+          name: "Category 30"
+        -
+          entity_id: 4
+          name: "Category 40"
+        -
+          entity_id: 5
+          name: "Category 10"
+        -
+          entity_id: 6
+          name: "Category 20"
+        -
+          entity_id: 7
+          name: "Category 30"
+        -
+          entity_id: 8
+          name: "Category 40"

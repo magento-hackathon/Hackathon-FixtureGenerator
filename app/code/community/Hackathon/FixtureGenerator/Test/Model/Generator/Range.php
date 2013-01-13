@@ -43,10 +43,9 @@ class Hackathon_FixtureGenerator_Test_Model_Generator_Range extends EcomDev_PHPU
     public function testGenerate(array $currentRow, $string, $numberOfIteration)
     {
         $this->generator = $this->getMockForAbstractClass('Hackathon_FixtureGenerator_Model_Generator_Range', array($string));
-        $dataSet = $this->readAttribute($this, 'dataName');
 		for ($i = 1; $i <= $numberOfIteration; $i++) {
 			$this->assertEquals(
-				$this->expected($dataSet)->getData('iteration_' . $i),
+				$this->expected('auto')->getData('iteration_' . $i),
 				$this->generator->generate($currentRow),
 				'Assertation ' . $i . ' failed'
 		    );
