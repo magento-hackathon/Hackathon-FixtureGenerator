@@ -1,0 +1,40 @@
+three_nested_levels:
+  array:
+    other:
+      path: value
+      other_structure: value2
+    nice_path:
+      path: value
+    nice_path_with_slash:
+      /sleshed_path: some_value
+    variable:
+      name:
+        value: somevalue
+existing_nested_level:
+  array:
+    other:
+      path: new_value
+      other_structure: value2
+    nice_path:
+      path: value
+    nice_path_with_slash:
+      /sleshed_path: some_value
+set_slashed_path:
+  array:
+    other:
+      path: value
+      other_structure: value2
+    nice_path:
+      path: value
+    nice_path_with_slash:
+      /sleshed_path: new_value
+set_key_value:
+  array:
+    other:
+      path: value
+      other_structure: value2
+    nice_path:
+      path: value
+    nice_path_with_slash:
+      /sleshed_path: some_value
+    data: value
