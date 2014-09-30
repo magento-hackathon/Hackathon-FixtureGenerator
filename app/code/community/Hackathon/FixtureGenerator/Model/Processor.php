@@ -50,7 +50,7 @@ class Hackathon_FixtureGenerator_Model_Processor implements EcomDev_PHPUnit_Mode
      *
      * @return EcomDev_PHPUnit_Model_Fixture_Processor_Interface
      */
-    public function apply(array $data, $key, EcomDev_PHPUnit_Model_Fixture_Interface $fixture)
+    public function apply(array $data, $key, EcomDev_PHPUnit_Model_FixtureInterface $fixture)
     {
         // Does nothing
     }
@@ -64,7 +64,7 @@ class Hackathon_FixtureGenerator_Model_Processor implements EcomDev_PHPUnit_Mode
      *
      * @return EcomDev_PHPUnit_Model_Fixture_Processor_Interface
      */
-    public function discard(array $data, $key, EcomDev_PHPUnit_Model_Fixture_Interface $fixture)
+    public function discard(array $data, $key, EcomDev_PHPUnit_Model_FixtureInterface $fixture)
     {
         // Does nothing
     }
@@ -75,7 +75,7 @@ class Hackathon_FixtureGenerator_Model_Processor implements EcomDev_PHPUnit_Mode
      * @param EcomDev_PHPUnit_Model_Fixture_Interface $fixture
      * @return EcomDev_PHPUnit_Model_Fixture_Processor_Interface
      */
-    public function initialize(EcomDev_PHPUnit_Model_Fixture_Interface $fixture)
+    public function initialize(EcomDev_PHPUnit_Model_FixtureInterface $fixture)
     {
         $generateData = $fixture->getFixtureValue('generate');
         $fixtureData = array();
